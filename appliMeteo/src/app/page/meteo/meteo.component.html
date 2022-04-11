@@ -1,0 +1,7 @@
+<section>
+  <app-search class="d-flex justify-content-center" (setCityEvent)="setCity($event)"></app-search>
+</section>
+
+<section>
+  <app-block-meteo [dataForMeteo]="dataForMeteo$ | async" [dataForMeteoNow]="null"></app-block-meteo>
+</section>

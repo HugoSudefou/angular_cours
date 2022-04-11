@@ -1,0 +1,17 @@
+<div>
+  <section id="search" class="d-flex justify-content-center">
+    <form [class]="class">
+      <input id="typeahead-basic" type="text" class="form-control" name="nom"
+             [maxLength]="maxLength"
+             [(ngModel)]="formCity"
+             [ngbTypeahead]="search" [inputFormatter]="formatter" [resultTemplate]="rt"/>
+      <button [disabled]="!(formCity && !!formCity.nom)" class="btn btn-outline-success" type="submit"
+              (click)="onSubmit()">Search
+      </button>
+    </form>
+
+    <ng-template #rt let-r="result" let-t="term">
+      <ngb-highlight [result]="r.nom" [term]="t"></ngb-highlight>
+    </ng-template>
+  </section>
+</div>
