@@ -79,5 +79,7 @@ Pour ça voici la commande :
     > Exemple : `ng generate component hello-world` ou `ng g c hello-world`
 - [OpenWeatherMap](https://openweathermap.org/api)
     > Une api pour avoir la météo
+- [Api Communes Française](https://geo.api.gouv.fr/communes)
+    > Une api pour avoir toutes les villes française
 - `toto`
     > test

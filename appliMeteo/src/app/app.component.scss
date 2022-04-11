@@ -1,3 +1,8 @@
 section {
-  height: calc(100vh);
+  min-height: calc(90vh);
+}
+
+::ng-deep .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }

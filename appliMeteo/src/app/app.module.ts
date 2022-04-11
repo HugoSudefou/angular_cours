@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { SecondComponentComponent } from './components/second-component/second-c
 import { MeteoPage } from './page/meteo/meteo.component';
 import { HomePage } from './page/home/home.component';
 import { BlockMeteoComponent } from './components/block-meteo/block-meteo.component';
+import { ToastContainerComponent } from './common/toast-container/toast-container.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { BlockMeteoComponent } from './components/block-meteo/block-meteo.compon
     MeteoPage,
     HomePage,
     BlockMeteoComponent,
+    ToastContainerComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
