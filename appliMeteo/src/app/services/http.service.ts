@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { catchError, map, Observable, throwError } from 'rxjs'
 import { CommuneApiInterface, OpenWeatherForecastInterface, OpenWeatherListInterface } from '../schemas/interfaces'
 import { ToastsService } from './toasts.service'
+import { environment } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,7 @@ export class HttpService {
   }
 
   getMeteoNow (lat: number, long: number): Observable<OpenWeatherListInterface> {
-    return this.http.get<OpenWeatherListInterface>(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=3dfd67983e09a9d2946d61a0cff4a325&lang=fr`).pipe(
+    return this.http.get<OpenWeatherListInterface>(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${environment.apiKey}&lang=fr`).pipe(
       map((value) => this.handleSucces('getMeteoNow', value)),
       catchError((err) => {
         return this.handleError('getMeteoNow', err)
@@ -31,7 +32,7 @@ export class HttpService {
   }
 
   getMeteoWithPrevision (city: string): Observable<OpenWeatherForecastInterface> {
-    return this.http.get<OpenWeatherForecastInterface>(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=3dfd67983e09a9d2946d61a0cff4a325&lang=fr`).pipe(
+    return this.http.get<OpenWeatherForecastInterface>(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${environment.apiKey}&lang=fr`).pipe(
       map((value) => this.handleSucces('getMeteoWithPrevision', value)),
       catchError((err) => {
         return this.handleError('getMeteoWithPrevision', err)
