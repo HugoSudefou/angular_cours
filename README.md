@@ -79,7 +79,9 @@ Pour ça voici la commande :
     > Exemple : `ng generate component hello-world` ou `ng g c hello-world`
 - [OpenWeatherMap](https://openweathermap.org/api)
     > Une api pour avoir la météo
-    > Url utilisé pour avoir la météo du jour : [Météo Du Jour](https://api.openweathermap.org/data/2.5/weather)
-    > Url utilisé pour avoir la météo avec prévision  : [Météo avec prévision](https://api.openweathermap.org/data/2.5/forecast)
+                                                     
+    > Url utilisé pour avoir la météo du jour : https://api.openweathermap.org/data/2.5/weather 
+    
+    > Url utilisé pour avoir la météo avec prévision  : https://api.openweathermap.org/data/2.5/forecast
 - [Api Communes Française](https://geo.api.gouv.fr/communes)
     > Une api pour avoir toutes les villes française
