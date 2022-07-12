@@ -85,7 +85,3 @@ Pour ça voici la commande :
     > Url utilisé pour avoir la météo avec prévision  : https://api.openweathermap.org/data/2.5/forecast
 - [Api Communes Française](https://geo.api.gouv.fr/communes)
     > Une api pour avoir toutes les villes française
-
-
-
-<img src="fd" onerror="alert('test')"/>
